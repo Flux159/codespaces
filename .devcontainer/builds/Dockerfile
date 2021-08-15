@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:16
 USER root
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends curl wget jq ripgrep postgresql-common vim
+    && apt-get -y install --no-install-recommends curl wget jq ripgrep postgresql-common vim python3-pip
 # RUN curl -sL https://deb.nodesource.com/setup_16.x | bash && apt-get install -y nodejs
 RUN npm install --global yarn
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
